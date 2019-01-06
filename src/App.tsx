@@ -1,12 +1,21 @@
-import * as tsx from 'vue-tsx-support';
+import { componentFactory } from 'vue-tsx-support';
 import { VNode } from 'vue';
 import HelloWorld from '@/components/HelloWorld';
+import NavBar from './components/NavBar/NavBar';
 
-const App = tsx.componentFactory.create({
+import * as styles from './App.module.scss';
+import './styles/transitions.scss';
+
+const App = componentFactory.create({
   render(): VNode {
     return (
-      <div class="App">
-        <HelloWorld msg="Hello TSX world!" />
+      <div class={styles.App}>
+        <NavBar />
+        <div class={styles.content}>
+          <transition name="fade" mode="out-in">
+            <router-view />
+          </transition>
+        </div>
       </div>
     );
   },

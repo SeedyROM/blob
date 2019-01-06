@@ -1,0 +1,30 @@
+@keyframes slideLoop {
+  from {
+    transform: translateX(-30px) rotate(-15deg);
+  }
+
+  to {
+    transform: translateX(30px) rotate(15deg);
+  }
+}
+
+.HelloWorld {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  padding: 1.5rem;
+  
+  .img {
+    animation: slideLoop;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+  }
+  
+  .heading {
+    color: #00B786;
+  }
+}
