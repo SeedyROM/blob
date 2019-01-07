@@ -4,7 +4,6 @@ import { VNode } from 'vue';
 import styles from './NavBar.module.scss';
 
 const NavBar = componentFactory.create({
-
   render(): VNode {
     return (
       <nav class={styles.NavBar}>
