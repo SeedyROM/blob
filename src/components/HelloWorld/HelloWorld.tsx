@@ -6,6 +6,7 @@ import logo from '@/assets/logo.png';
 import * as styles from './HelloWorld.module.scss';
 
 const HelloWorld = componentFactory.create({
+  name: 'HelloWorld',
   props: {
     msg: prop(String).required,
   },

@@ -7,6 +7,7 @@ import * as styles from './App.module.scss';
 import './styles/transitions.scss';
 
 const App = componentFactory.create({
+  name: 'App',
   render(): VNode {
     return (
       <div class={styles.App}>

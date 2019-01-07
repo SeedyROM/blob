@@ -3,6 +3,7 @@ import { VNode } from 'vue';
 import HelloWorld from '../components/HelloWorld';
 
 const Home = componentFactory.create({
+  name: 'Home',
   render(): VNode {
     return (
       <div class="Home" key="Home">
